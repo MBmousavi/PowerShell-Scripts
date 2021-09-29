@@ -1,0 +1,6 @@
+$Action = New-ScheduledTaskAction -Execute 'PowerShell.exe' -Argument '-File C:\Windows\System32\copy.ps1'
+$Trigger = New-ScheduledTaskTrigger -At 01:00AM -Daily
+$Settings = New-ScheduledTaskSettingsSet
+$Task = New-ScheduledTask -Action $Action -Trigger $Trigger -Settings $Settings
+Register-ScheduledTask -TaskName 'test task' -InputObject $Task -User 'user' -Password 'xxxxxxx'
+
