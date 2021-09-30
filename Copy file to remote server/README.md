@@ -1,4 +1,4 @@
-This simple script will copy local log files to a remote server then removes local files. ( copy.ps1 )
+This simple script will copy local log files to a remote server then removes local files. It skips today and yesterday logs. ( copy.ps1 )
 
 Then we create a task to copy logs everynight to remote server. ( Task )
 
